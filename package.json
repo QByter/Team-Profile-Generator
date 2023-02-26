@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "name": "12-team-profile-generator-lesson",
+  "description": "## Your Task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.5",
+    "jest": "^29.4.3"
+  }
+}
