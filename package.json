@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "test": "jest --verbose"
-  },
+    "test": "jest"},
+
   "name": "12-team-profile-generator-lesson",
   "description": "## Your Task",
   "version": "1.0.0",
