@@ -1,0 +1,29 @@
+
+
+
+
+
+.jumbotron {
+  background: #e84756;
+  color: whitesmoke;
+}
+
+.card-header {
+  background: #0077f7;
+  color: whitesmoke;
+}
+
+.card {
+  min-width: 250px;
+  box-shadow: rgb(87, 84, 84) 0px 5.5488px 8.496px 0px;
+  margin-top: 30px;
+}
+
+.team-area {
+  gap: 20px;
+   flex-wrap: wrap;
+}
+
+
+
+

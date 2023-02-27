@@ -64,9 +64,17 @@ Contact the developer for information.
 ### Deployed Link
 - https://qbyter.github.io/Team-Profile-Generator/
 
-
 ### Example Team Profile Web Pag
 - https://qbyter.github.io/Team-Profile-Generator/example.html
+
+### Technologies Used:
+* Object-Oriented Programming
+* Node.js
+* JavaScript
+* HTML
+* CSS
+
+
 
 ### Contact details:
 - Contact me via GitHub with any questions, suggestions or collaboration ideas.
