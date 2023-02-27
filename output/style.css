@@ -1,0 +1,19 @@
+
+.jumbotron {
+
+    background: #e84756;
+    color: whitesmoke;
+}
+
+.card-header {
+
+    background: #0077f7;
+    color: whitesmoke;
+
+}
+
+.card {
+
+    box-shadow: rgba(0,0,0) 0px 5.5488px 18.496px 0px;
+    
+}

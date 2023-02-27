@@ -1,7 +1,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const Employee = require("./lib/Employee");
+// const Employee = require("./lib/Employee");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs/promises");
@@ -14,12 +14,17 @@ const { type } = require("os");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
-
 let team = [];
 
 addManager();
 
 // menu();
+
+async function finish() {
+  let htmlDoc = render(team);
+  await fs.writeFile(outputPath, htmlDoc);
+}
+
 function addManager() {
   console.log("                           ");
   console.log("===========================");
@@ -95,7 +100,7 @@ function menu() {
           addIntern();
           break;
         case "Finish building the team":
-          console.log(id, email, officeNumber);
+          finish();
           break;
       }
     });
