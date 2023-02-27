@@ -51,18 +51,23 @@ Contact the developer through GitHub.
 
 ## Tests
 #
-Contact the developer.
+Contact the developer for information.
 <br>
 <br>
 
 ## Questions
 #
 
-### GitHub repository for the developer:
+### GitHub Repository Ror The Reveloper:
 - https://github.com/QByter
 <br>
-### Deployed link
+### Deployed Link
 - https://qbyter.github.io/Team-Profile-Generator/
+
+
+### Example Team Profile Web Pag
+- https://qbyter.github.io/Team-Profile-Generator/example.html
+
 ### Contact details:
 - Contact me via GitHub with any questions, suggestions or collaboration ideas.
 <br>
