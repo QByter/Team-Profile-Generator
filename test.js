@@ -5,17 +5,17 @@ const Intern = require("./lib/Intern");
 
 // addManager();
 
-let teamArray = [];
+let team = [];
 
 addManager();
 
 // menu();
 function addManager() {
-    console.log("                           ");
-    console.log("===========================");
-    console.log("Adding team manager");
-    console.log("===========================");
-    console.log("                           ");
+  console.log("                           ");
+  console.log("===========================");
+  console.log("Add team manager");
+  console.log("===========================");
+  console.log("                           ");
   const { name, id, email, officeNumber } = inquirer
     .prompt([
       {
@@ -39,22 +39,24 @@ function addManager() {
         name: "officeNumber",
         message: "Enter office number: ",
       },
-
     ])
-     .then((response) => {
-       
-let manager = new Manager (response.name, response.id, response.email, response.officeNumber);
-teamArray.push(manager);
-console.log(teamArray);
+    .then((response) => {
+      let manager = new Manager(
+        response.name,
+        response.id,
+        response.email,
+        response.officeNumber
+      );
+      team.push(manager);
+      console.log(team);
     })
     .then(() => {
-        menu();
-      });
-};
+      menu();
+    });
+}
 
 function menu() {
-  
-//   console.clear();
+  //   console.clear();
   console.log("                           ");
   console.log("===========================");
   console.log("What would you like to do next?");
@@ -83,19 +85,19 @@ function menu() {
           addIntern();
           break;
         case "Finish building the team":
-            console.log(id, email, officeNumber);
-        break;
+          console.log(id, email, officeNumber);
+          break;
       }
     });
 }
 
 function addIntern() {
-    console.clear();
-    console.log("                           ");
-    console.log("===========================");
-    console.log("Adding intern");
-    console.log("===========================");
-    console.log("                           ");
+  console.clear();
+  console.log("                           ");
+  console.log("===========================");
+  console.log("Add intern");
+  console.log("===========================");
+  console.log("                           ");
   const { name, id, email, school } = inquirer
     .prompt([
       {
@@ -121,23 +123,27 @@ function addIntern() {
       },
     ])
     .then((response) => {
-      
-let intern = new Intern (response.name, response.id, response.email, response.school);
-teamArray.push(intern);
-console.log(teamArray);
-   })
-   .then(() => {
-    menu();
-  });
+      let intern = new Intern(
+        response.name,
+        response.id,
+        response.email,
+        response.school
+      );
+      team.push(intern);
+      console.log(team);
+    })
+    .then(() => {
+      menu();
+    });
 }
 
 function addEngineer() {
-    console.clear();
-    console.log("                           ");
-    console.log("===========================");
-    console.log("Adding engineer");
-    console.log("===========================");
-    console.log("                           ");
+  console.clear();
+  console.log("                           ");
+  console.log("===========================");
+  console.log("Add engineer");
+  console.log("===========================");
+  console.log("                           ");
   const { name, id, email, github } = inquirer
     .prompt([
       {
@@ -163,11 +169,15 @@ function addEngineer() {
       },
     ])
     .then((response) => {
-      
-let engineer = new Engineer (response.name, response.id, response.email, response.github);
-teamArray.push(engineer);
-console.log(teamArray);
-   })
+      let engineer = new Engineer(
+        response.name,
+        response.id,
+        response.email,
+        response.github
+      );
+      team.push(engineer);
+      console.log(team);
+    })
     .then(() => {
       menu();
     });
