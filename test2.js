@@ -1,8 +1,11 @@
 const inquirer = require("inquirer");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 // addManager();
 
-let team = [];
+let teamArray = [];
 
 addManager();
 
@@ -39,7 +42,10 @@ function addManager() {
 
     ])
      .then((response) => {
-        console.log(response.name);
+       
+let manager = new Manager (response.name, response.id, response.email, response.officeNumber);
+teamArray.push(manager);
+console.log(teamArray);
     })
     .then(() => {
         menu();
@@ -114,9 +120,15 @@ function addIntern() {
         message: "Enter the intern's school: ",
       },
     ])
-    .then(() => {
-      menu();
-    });
+    .then((response) => {
+      
+let intern = new Intern (response.name, response.id, response.email, response.school);
+teamArray.push(intern);
+console.log(teamArray);
+   })
+   .then(() => {
+    menu();
+  });
 }
 
 function addEngineer() {
@@ -150,8 +162,13 @@ function addEngineer() {
         message: "Enter engineer's github ID: ",
       },
     ])
+    .then((response) => {
+      
+let engineer = new Engineer (response.name, response.id, response.email, response.github);
+teamArray.push(engineer);
+console.log(teamArray);
+   })
     .then(() => {
       menu();
     });
 }
-// console.log(name,id, email, officeNumber);
