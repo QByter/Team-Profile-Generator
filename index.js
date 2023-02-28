@@ -22,7 +22,7 @@ addManager();
 async function finish() {
   let htmlDoc = render(team);
   await fs.writeFile(outputPath, htmlDoc);
-};
+}
 
 function addManager() {
   console.log("                           ");
@@ -36,22 +36,53 @@ function addManager() {
         type: "input",
         name: "name",
         message: "Enter the team manager's name: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a name';
+          }
+          return true;
+        },
       },
 
       {
         type: "input",
         name: "id",
         message: "Enter ID: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a valid ID';
+          }
+          return true;
+        },
       },
+
       {
         type: "input",
         name: "email",
         message: "Enter email: ",
+        validate: function (email) {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+
+          if (valid) {
+            console.log("Great job");
+            return true;
+          } else {
+            console.log(".  Please enter a valid email");
+            return false;
+          }
+        },
       },
+
       {
         type: "inout",
         name: "officeNumber",
         message: "Enter office number: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter the office number';
+          }
+          return true;
+        },
       },
     ])
     .then((response) => {
@@ -118,22 +149,51 @@ function addIntern() {
         type: "input",
         name: "name",
         message: "Enter intern's name: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a name';
+          }
+          return true;
+        },
       },
 
       {
         type: "input",
         name: "id",
         message: "Enter ID: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a valid ID';
+          }
+          return true;
+        },
       },
       {
         type: "input",
         name: "email",
         message: "Enter email: ",
+        validate: function (email) {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+
+          if (valid) {
+            console.log("Great job");
+            return true;
+          } else {
+            console.log(".  Please enter a valid email");
+            return false;
+          }
+        },
       },
       {
         type: "input",
         name: "school",
         message: "Enter the intern's school: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a school';
+          }
+          return true;
+        },
       },
     ])
     .then((response) => {
@@ -164,22 +224,51 @@ function addEngineer() {
         type: "input",
         name: "name",
         message: "Enter engineer's name: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a name';
+          }
+          return true;
+        },
       },
 
       {
         type: "input",
         name: "id",
         message: "Enter ID: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter a valid ID';
+          }
+          return true;
+        },
       },
       {
         type: "input",
         name: "email",
         message: "Enter email: ",
+        validate: function (email) {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+
+          if (valid) {
+            console.log("Great job");
+            return true;
+          } else {
+            console.log(".  Please enter a valid email");
+            return false;
+          }
+        },
       },
       {
         type: "input",
         name: "github",
         message: "Enter engineer's github ID: ",
+        validate: function(input) {
+          if (!input) {
+            return 'Please enter GitHub username';
+          }
+          return true;
+        },
       },
     ])
     .then((response) => {
